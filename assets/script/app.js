@@ -41,3 +41,33 @@ function isEmail(email) {
         return true;
     return false;
 }
+
+const footerButton = document.querySelector(".footer-button");
+const footerEmail = document.querySelector(".footer-email");
+const dialogueEmail = document.querySelector(".email");
+const dialogueButton = document.querySelector(".button");
+
+function validateEmail(event, form) {
+    event.preventDefault()
+    let email = form.value;
+    let validEmail = false;
+    if(email != "") {
+        console.log("test1");
+        validEmail = isEmail(email);
+    }
+    if(validEmail) {
+        console.log("test2");
+        form.value = "";
+        form.style.borderColor = "rgb(23, 216, 23)";
+    }
+    else {
+        console.log("test3");
+        form.style.borderColor = "rgb(250, 49, 49)";
+    }
+}
+footerButton.addEventListener("click", (evnt) => {
+    validateEmail(evnt, footerEmail);
+});
+dialogueButton.addEventListener("click", (evnt) => {
+    validateEmail(evnt, dialogueEmail);
+});
