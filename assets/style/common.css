@@ -188,5 +188,14 @@ footer {
     color: white;
     font-weight: 500;
     margin-bottom: 5px;
+    transition-duration: 0.2s;
+}
+
+.footer-button:hover {
+    background-color: #006ad5;
+}
+
+.footer-button:active {
+    background-color: #1d5c9b;
 }
 /*end footer*/
