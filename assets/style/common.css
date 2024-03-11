@@ -144,3 +144,58 @@ ul li a:hover, .login-button:hover{
     transform: translateY(10px);
 }
 /*end Account popup*/
+
+/*footer*/
+footer {
+    height: 124px;
+    background-color: rgb(33, 33, 34);
+}
+
+.cc {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 124px;
+}
+
+.new-movies-alert {
+    height: 124px;
+    display: grid;
+    place-items: center;
+}
+
+.new-movies-alert p {
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    margin-bottom: -29px;
+}
+
+.footer-email {
+    height: 36px;
+    width: 210px;
+    padding: 0 12px;
+    margin-top: -20px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.footer-button {
+    height: 36px;
+    background-color: #007fff;
+    padding: 0 12px;
+    margin-top: -20px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+    transition-duration: 0.2s;
+}
+
+.footer-button:hover {
+    background-color: #006ad5;
+}
+
+.footer-button:active {
+    background-color: #1d5c9b;
+}
+/*end footer*/
