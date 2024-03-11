@@ -144,3 +144,17 @@ ul li a:hover, .login-button:hover{
     transform: translateY(10px);
 }
 /*end Account popup*/
+
+/*footer*/
+footer {
+    height: 124px;
+    background-color: rgb(33, 33, 34);
+}
+
+.cc {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 124px;
+}
+
+
+/*end footer*/
