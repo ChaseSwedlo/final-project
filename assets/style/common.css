@@ -105,22 +105,22 @@ ul li a:hover, .login-button:hover{
     margin-bottom: 6px;
 }
 
-.log-in-form input[type=button] {
+.log-in-form .button {
     width: 270px;
     height: 42px;
     border-radius: 21px;
     background-color: #007fff;
     color: white;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     transition-duration: 0.2s;
 }
 
-.log-in-form input[type=button]:hover {
+.log-in-form .button:hover {
     background-color: #2892fb;
 }
 
-.log-in-form input[type=button]:active {
+.log-in-form .button:active {
     background-color: #006ad5;
 }
 
@@ -176,6 +176,7 @@ footer {
     margin-top: -20px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.342);
 }
 
 .footer-button {
