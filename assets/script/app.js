@@ -24,3 +24,20 @@ darkBkg.addEventListener("click", hideCreateAccount);
 formBox.addEventListener("click", (event) => {
     event.stopPropagation();
 });
+
+//Email validation
+function isEmail(email) {
+    let hasAt = false;
+    let hasDot = false;
+    for(let i = 0; i < email.length-5; i++) {
+        if(email.charAt(i) === '@') {
+            hasAt = true;
+            i = email.length+1
+        }
+    }
+    if(email.charAt(email.length-3) === '.' || email.charAt(email.length-4) === '.')
+        hasDot = true;
+    if(hasAt && hasDot)
+        return true;
+    return false;
+}
