@@ -71,3 +71,11 @@ footerButton.addEventListener("click", (evnt) => {
 dialogueButton.addEventListener("click", (evnt) => {
     validateEmail(evnt, dialogueEmail);
 });
+
+//Top movies scroll
+//Did this to adjust for mouse scrolling.
+const topMoviesDiv = document.querySelector(".top-ten-movies");
+topMoviesDiv.addEventListener('wheel', function(event) {
+    event.preventDefault();
+    topMoviesDiv.scrollLeft += event.deltaY;
+});
