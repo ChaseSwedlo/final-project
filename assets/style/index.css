@@ -89,29 +89,37 @@ body {
     margin-right: -50px;
 }
 
-.num-three h1 {
-    margin-right: -55px;
-}
-
 .num-four h1, .num-five h1, .num-six h1 {
     margin-right: -57px;
 }
 
-.num-seven h1 {
+.num-three h1, .num-seven h1, .num-eight h1, .num-nine h1 {
     margin-right: -55px;
 }
 
-.num-eight h1 {
-    margin-right: -55px;
-}
-
-.num-nine h1 {
-    margin-right: -55px;
-}
 .num-ten h1 {
     letter-spacing: -26px;
     margin-top: 4px;
     font-size: 200px;
     margin-right: -32px;
 }
+
+/*
+    Tried to use :not(.numfour) here but would not work
+    Had to resort to hard coding it
+*/
+.num-one, .num-two, .num-three, 
+.num-five, .num-six, .num-seven, 
+.num-eight, .num-nine, .num-ten {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.num-four {
+    text-shadow:
+      3px 3px 0 #000,
+      -3px 3px 0 #000,
+      -3px -3px 0 #000,
+      3px -3px 0 #000;
+  }
 /*Top Movies end*/
