@@ -19,6 +19,14 @@ body {
     padding: var(--defualt-margin) 0;
 }
 
+.top-ten-movies {
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    margin-left: 60px;
+}
+
 .top-movies-title {
     font-size: 20px;
     font-weight: 500;
@@ -27,7 +35,6 @@ body {
 }
 
 .movie-box {
-    background-color: blue;
     height: 200px;
 }
 
@@ -39,6 +46,26 @@ body {
     width: 253px;
 }
 
+.num-three {
+    width: 258px;
+}
+
+.num-four, .num-five, .num-six {
+    width: 261px;
+}
+
+.num-seven {
+    width: 241px;
+}
+
+.num-eight, .num-nine {
+    width: 259px;
+}
+
+.num-ten {
+    width: 287px;
+}
+
 .movie-box figure{
     height: 200px;
     width: 159px;
@@ -48,12 +75,10 @@ body {
     margin: 0;
     padding: 0;
     letter-spacing: 0;
-    font-size: 270px;
-    margin-top: -35px;
+    font-size: 264px;
+    margin-top: -32px;
     line-height: 1;
     color: white;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
 }
 
 .num-one h1 {
@@ -62,5 +87,31 @@ body {
 
 .num-two h1 {
     margin-right: -50px;
+}
+
+.num-three h1 {
+    margin-right: -55px;
+}
+
+.num-four h1, .num-five h1, .num-six h1 {
+    margin-right: -57px;
+}
+
+.num-seven h1 {
+    margin-right: -55px;
+}
+
+.num-eight h1 {
+    margin-right: -55px;
+}
+
+.num-nine h1 {
+    margin-right: -55px;
+}
+.num-ten h1 {
+    letter-spacing: -26px;
+    margin-top: 4px;
+    font-size: 200px;
+    margin-right: -32px;
 }
 /*Top Movies end*/
