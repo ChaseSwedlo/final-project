@@ -50,7 +50,7 @@ const passField = document.querySelector('.password');
 const passText = document.querySelector('.pass-text');
 
 function validateEmail(event, form) {
-    event.preventDefault()
+    event.preventDefault();
     let email = form.value;
     let validEmail = false;
     if(email != "") {
