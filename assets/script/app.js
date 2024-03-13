@@ -107,8 +107,11 @@ function hideAndRemove() {
     dialogueEmail.value = '';
 }
 dialogueButton.addEventListener("click", (evnt) => {
-    if(validateEmail(evnt, dialogueEmail) && validName(dialogueFirstName) && 
-       validName(dialogueLastName) && validPassword()) {
+    let email = validateEmail(evnt, dialogueEmail);
+    let firstName = validName(dialogueFirstName);
+    let lastName = validName(dialogueLastName);
+    let password = validPassword();
+    if(email && firstName && lastName && password) {
         setTimeout(hideAndRemove, 600);
     }
 });
