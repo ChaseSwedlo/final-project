@@ -61,74 +61,13 @@ function scrollLeft() {
 rightButton.addEventListener("click", scrollRight);
 leftButton.addEventListener("click", scrollLeft);
 
-<<<<<<< HEAD
 // END SCROLL LANDING-PAGE
-=======
-function validateEmail(event, form) {
-    event.preventDefault();
-    let email = form.value;
-    let validEmail = false;
-    if(email != "") {
-        validEmail = isEmail(email);
-    }
-    if(validEmail) {
-        form.style.borderColor = "rgb(23, 216, 23)";
-        return true;
-    }
-    else {
-        form.style.borderColor = "rgb(250, 49, 49)";
-        return false;
-    }
-}
-footerButton.addEventListener("click", (evnt) => {
-    validateEmail(evnt, footerEmail);
-});
->>>>>>> 43d4e42e209747a501d3e87970faacd308a6d0e5
 
 // SCROLL-LANDING ARROW VISIBILITY 
 function showButtons() {
     leftButton.classList.add("visible");
     rightButton.classList.add("visible");
 }
-<<<<<<< HEAD
-=======
-function validPassword() {
-    if(passField.value.length < 5) {
-        passText.classList.remove('hide-password-text');
-        passField.style.borderColor = "rgb(250, 49, 49)";
-        return false;
-    }
-    else {
-        passText.classList.add('hide-password-text');
-        passField.style.borderColor = "rgb(23, 216, 23)";
-        return true;
-    }
-}
-function defualtBorders() {
-    passField.style.borderColor = "rgba(0, 0, 0, 0.229)";
-    dialogueFirstName.style.borderColor = "rgba(0, 0, 0, 0.229)";
-    dialogueLastName.style.borderColor =  "rgba(0, 0, 0, 0.229)";
-    dialogueEmail.style.borderColor = "rgba(0, 0, 0, 0.229)";
-}
-function hideAndRemove() {
-    hideCreateAccount();
-    defualtBorders();
-    passField.value = '';
-    dialogueFirstName.value = '';
-    dialogueLastName.value = '';
-    dialogueEmail.value = '';
-}
-dialogueButton.addEventListener("click", (evnt) => {
-    let email = validateEmail(evnt, dialogueEmail);
-    let firstName = validName(dialogueFirstName);
-    let lastName = validName(dialogueLastName);
-    let password = validPassword();
-    if(email && firstName && lastName && password) {
-        setTimeout(hideAndRemove, 600);
-    }
-});
-//End Verification
->>>>>>> 43d4e42e209747a501d3e87970faacd308a6d0e5
 
 function hideButtons() {
     leftButton.classList.remove("visible");

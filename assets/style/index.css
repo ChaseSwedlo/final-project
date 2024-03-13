@@ -2,7 +2,7 @@
 
 :root {
     --header-height: 48px;
-    --landing-page-height: 550px
+    --landing-page-height: 0px
 }
 
 .container {
@@ -10,6 +10,9 @@
     margin-inline: auto;
 }
 
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+}
 /*CAROUSEL-LANDING*/
 
 .scroll {
@@ -103,7 +106,8 @@ h3 {
 
 .movie-ticket {
     padding: 5px 25px;
-    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
     color: #fff;
 }
 
