@@ -97,7 +97,7 @@ h3 {
 }
 
 .box span {
-    padding: 2px;
+    padding: 2px 4px;
     background-color: var(--primary-color);
 }
 
