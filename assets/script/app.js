@@ -61,7 +61,9 @@ function scrollLeft() {
 rightButton.addEventListener("click", scrollRight);
 leftButton.addEventListener("click", scrollLeft);
 
+<<<<<<< HEAD
 // END SCROLL LANDING-PAGE
+=======
 function validateEmail(event, form) {
     event.preventDefault();
     let email = form.value;
@@ -81,13 +83,15 @@ function validateEmail(event, form) {
 footerButton.addEventListener("click", (evnt) => {
     validateEmail(evnt, footerEmail);
 });
+>>>>>>> 43d4e42e209747a501d3e87970faacd308a6d0e5
 
 // SCROLL-LANDING ARROW VISIBILITY 
 function showButtons() {
     leftButton.classList.add("visible");
     rightButton.classList.add("visible");
 }
-
+<<<<<<< HEAD
+=======
 function validPassword() {
     if(passField.value.length < 5) {
         passText.classList.remove('hide-password-text');
@@ -124,15 +128,8 @@ dialogueButton.addEventListener("click", (evnt) => {
     }
 });
 //End Verification
+>>>>>>> 43d4e42e209747a501d3e87970faacd308a6d0e5
 
-//Top movies scroll
-//Did this to adjust for mouse scrolling.
-const topMoviesDiv = document.querySelector(".top-ten-movies");
-topMoviesDiv.addEventListener('wheel', function(event) {
-    event.preventDefault();
-    topMoviesDiv.scrollLeft += event.deltaY;
-});
-=======
 function hideButtons() {
     leftButton.classList.remove("visible");
     rightButton.classList.remove("visible");
