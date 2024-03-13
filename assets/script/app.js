@@ -46,32 +46,46 @@ const footerButton = document.querySelector(".footer-button");
 const footerEmail = document.querySelector(".footer-email");
 const dialogueEmail = document.querySelector(".email");
 const dialogueButton = document.querySelector(".button");
+const dialogueFirstName = document.querySelector('.fname');
+const dialogueLastName = document.querySelector('.lname');
+const passField = document.querySelector('.password');
 
 function validateEmail(event, form) {
     event.preventDefault()
     let email = form.value;
     let validEmail = false;
     if(email != "") {
-        console.log("test1");
         validEmail = isEmail(email);
     }
     if(validEmail) {
-        console.log("test2");
-        form.value = "";
         form.style.borderColor = "rgb(23, 216, 23)";
     }
     else {
-        console.log("test3");
         form.style.borderColor = "rgb(250, 49, 49)";
     }
 }
 footerButton.addEventListener("click", (evnt) => {
     validateEmail(evnt, footerEmail);
 });
+
+//Password/name validation
+function validName(name) {
+    if(name.value != '' && name.value.length > 1) {
+        name.style.borderColor = "rgb(23, 216, 23)";
+    }
+    else {
+        name.style.borderColor = "rgb(250, 49, 49)";
+    }
+}
+function validPassword() {
+
+}
 dialogueButton.addEventListener("click", (evnt) => {
     validateEmail(evnt, dialogueEmail);
-});
+    validName(dialogueFirstName);
+    validName(dialogueLastName);
 
+});
 //Top movies scroll
 //Did this to adjust for mouse scrolling.
 const topMoviesDiv = document.querySelector(".top-ten-movies");
