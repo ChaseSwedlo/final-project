@@ -4,6 +4,7 @@
 const loginButton = document.querySelector('.login-button');
 const login = document.querySelector('.log-in');
 const formBox = document.querySelector('.form-box');
+const dialogueButton = document.querySelector(".button");
 const darkBkg = document.querySelector('.dark-background');
 
 function showCreateAccount() {
@@ -43,14 +44,13 @@ function isEmail(email) {
 const footerButton = document.querySelector(".footer-button");
 const footerEmail = document.querySelector(".footer-email");
 const dialogueEmail = document.querySelector(".email");
-const dialogueButton = document.querySelector(".button");
 const dialogueFirstName = document.querySelector('.fname');
 const dialogueLastName = document.querySelector('.lname');
 const passField = document.querySelector('.password');
 const passText = document.querySelector('.pass-text');
 
 function validateEmail(event, form) {
-    event.preventDefault()
+    event.preventDefault();
     let email = form.value;
     let validEmail = false;
     if(email != "") {
@@ -65,8 +65,8 @@ function validateEmail(event, form) {
         return false;
     }
 }
-footerButton.addEventListener("click", (evnt) => {
-    validateEmail(evnt, footerEmail);
+footerButton.addEventListener("click", (event) => {
+    validateEmail(event, footerEmail);
 });
 
 //Password/name validation
@@ -81,15 +81,15 @@ function validName(name) {
     }
 }
 function validPassword() {
-    if(passField.value.length < 5) {
+    if(passField.value.length >= 5 && !passField.value.includes(' ')) {
+        passText.classList.add('hide-password-text');
+            passField.style.borderColor = "rgb(23, 216, 23)";
+            return true;
+    }
+    else {
         passText.classList.remove('hide-password-text');
         passField.style.borderColor = "rgb(250, 49, 49)";
         return false;
-    }
-    else {
-        passText.classList.add('hide-password-text');
-        passField.style.borderColor = "rgb(23, 216, 23)";
-        return true;
     }
 }
 function defualtBorders() {
@@ -106,9 +106,12 @@ function hideAndRemove() {
     dialogueLastName.value = '';
     dialogueEmail.value = '';
 }
-dialogueButton.addEventListener("click", (evnt) => {
-    if(validateEmail(evnt, dialogueEmail) && validName(dialogueFirstName) && 
-       validName(dialogueLastName) && validPassword()) {
+dialogueButton.addEventListener("click", (event) => {
+    let email = validateEmail(event, dialogueEmail);
+    let firstName = validName(dialogueFirstName);
+    let lastName = validName(dialogueLastName);
+    let password = validPassword();
+    if(email && firstName && lastName && password) {
         setTimeout(hideAndRemove, 600);
     }
 });
