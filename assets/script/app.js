@@ -12,13 +12,11 @@ function showCreateAccount() {
     formBox.classList.add("translateY");
     console.log('test');
 }
-
 function hideCreateAccount() {
     login.classList.remove("shown");
     login.classList.add("hidden");
     formBox.classList.remove("translateY");
 }
-
 loginButton.addEventListener("click", showCreateAccount);
 darkBkg.addEventListener("click", hideCreateAccount);
 formBox.addEventListener("click", (event) => {
@@ -49,6 +47,7 @@ const dialogueButton = document.querySelector(".button");
 const dialogueFirstName = document.querySelector('.fname');
 const dialogueLastName = document.querySelector('.lname');
 const passField = document.querySelector('.password');
+const passText = document.querySelector('.pass-text');
 
 function validateEmail(event, form) {
     event.preventDefault()
@@ -59,9 +58,11 @@ function validateEmail(event, form) {
     }
     if(validEmail) {
         form.style.borderColor = "rgb(23, 216, 23)";
+        return true;
     }
     else {
         form.style.borderColor = "rgb(250, 49, 49)";
+        return false;
     }
 }
 footerButton.addEventListener("click", (evnt) => {
@@ -72,20 +73,47 @@ footerButton.addEventListener("click", (evnt) => {
 function validName(name) {
     if(name.value != '' && name.value.length > 1) {
         name.style.borderColor = "rgb(23, 216, 23)";
+        return true;
     }
     else {
         name.style.borderColor = "rgb(250, 49, 49)";
+        return false;
     }
 }
 function validPassword() {
-
+    if(passField.value.length < 5) {
+        passText.classList.remove('hide-password-text');
+        passField.style.borderColor = "rgb(250, 49, 49)";
+        return false;
+    }
+    else {
+        passText.classList.add('hide-password-text');
+        passField.style.borderColor = "rgb(23, 216, 23)";
+        return true;
+    }
+}
+function defualtBorders() {
+    passField.style.borderColor = "rgba(0, 0, 0, 0.229)";
+    dialogueFirstName.style.borderColor = "rgba(0, 0, 0, 0.229)";
+    dialogueLastName.style.borderColor =  "rgba(0, 0, 0, 0.229)";
+    dialogueEmail.style.borderColor = "rgba(0, 0, 0, 0.229)";
+}
+function hideAndRemove() {
+    hideCreateAccount();
+    defualtBorders();
+    passField.value = '';
+    dialogueFirstName.value = '';
+    dialogueLastName.value = '';
+    dialogueEmail.value = '';
 }
 dialogueButton.addEventListener("click", (evnt) => {
-    validateEmail(evnt, dialogueEmail);
-    validName(dialogueFirstName);
-    validName(dialogueLastName);
-
+    if(validateEmail(evnt, dialogueEmail) && validName(dialogueFirstName) && 
+       validName(dialogueLastName) && validPassword()) {
+        setTimeout(hideAndRemove, 600);
+    }
 });
+//End Verification
+
 //Top movies scroll
 //Did this to adjust for mouse scrolling.
 const topMoviesDiv = document.querySelector(".top-ten-movies");
