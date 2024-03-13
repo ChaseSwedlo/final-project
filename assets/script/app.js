@@ -117,6 +117,7 @@ dialogueButton.addEventListener("click", (evnt) => {
 });
 //End Verification
 
+
 //Top movies scroll
 //Did this to adjust for mouse scrolling.
 const topMoviesDiv = document.querySelector(".top-ten-movies");
