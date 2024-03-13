@@ -100,7 +100,7 @@ ul li a:hover, .login-button:hover{
     transition-duration: 0.2s;
 }
 
-.log-in-form input[type=text]:focus, .log-in-form input[type=email]:focus {
+.log-in-form input[type=text]:focus {
     border: 1px solid rgb(105, 176, 248);
 }
 
