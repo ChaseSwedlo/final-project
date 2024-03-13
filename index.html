@@ -18,116 +18,106 @@
         <script src="./assets/script/app.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="flex sb">
-                    <h1>test</h1>
-                    <nav>
-                        <ul class="flex sb gap-40">
-                            <li><button class="login-button"><i class="fa-solid fa-user"></i></button></li>
-                            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-clapperboard"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-ticket"></i></a></li>
-                        </ul>
-                    </nav>
+        <div> 
+            <header>
+                <div class="container">
+                    <div class="sb flex">
+                        <h1>SilverScreen</h1>
+                        <nav>
+                            <ul class="flex gap-20">
+                                <li><a href="#"><i class="fa-solid fa-user login-button"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-clapperboard"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-ticket"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header> 
+            <section class="scroll snap flex fx">
+              <div class="box dune">
+                <div class="info container">
+                  
+                  <h2>DUNE: Part Two</h2>
+                  <div class="movie-info flex">
+                    <p>2h 46min</p>
+                    <p><span>PG-13</span></p>
+                    <p>Sci-fi/Adventure</p>
+                  </div>
+                  <button class="movie-ticket">Get Tickets</button>
+
+                </div>
+              </div>
+              <div class="box argylle">
+                <div class="info container">
+                  <h2>ARGYLLE</h2>
+                  <div class="movie-info flex">
+                    <p>2h 19min</p>
+                    <p><span>PG-13</span></p>
+                    <p>Action/Adventure</p>
+                  </div>
+                  <button class="movie-ticket">Get Tickets</button>
+                </div>
+              </div>
+              <div class="box poor-things">
+                <div class="info container">
+                  <h2>POOR THINGS</h2>
+                  <div class="movie-info flex">
+                    <p>2h 21min</p>
+                    <p><span>R</span></p>
+                    <p>Comedy/Adventure</p>
+                  </div>
+                  <button class="movie-ticket">Get Tickets</button>
+                  
+                </div>
+              </div>
+              <div class="box cabrini">
+                <div class="info container">
+                  <h2>CABRINI</h2>
+                  <p><span>LENGTH:</span> 2h 25min</p>
+                  <p><span>GENRE:</span> Biography/History</p>
+                  <p><span>RATING:</span> PG-13</p>
+                </div>
+              </div>
+              <div class="box madam-web">
+                <div class="info container">
+                  <h2>MADAM WEB</h2>
+                  <p><span>LENGTH:</span> 1h 56min</p>
+                  <p><span>GENRE:</span> Action/Adventure</p>
+                  <p><span>RATING:</span> PG-13</p>
+                </div>
+              </div>
+              <div class="box one-life">
+                <div class="info container">
+                  <h2>ONE LIFE</h2>
+                  <p><span>LENGTH:</span> 1h 49min</p>
+                  <p><span>GENRE:</span> History/Drama</p>
+                  <p><span>RATING:</span> PG</p>
+                </div>
+              </div>
+            </section>
+      
+            <button class="left scroll-button"><li><i class="fa-solid fa-chevron-left"></i></li></button>
+            <button class="right scroll-button"><li><i class="fa-solid fa-chevron-right"></i></li></button>
+        </div>
         <main>
             <div class="log-in hidden">
                 <div class="dark-background">
                     <div class="form-box">
                         <h2>Create account</h2>
                         <form class="log-in-form">
-                            <input type="text" class="email" placeholder="Email*">
+                            <input type="email" class="email" placeholder="Email*">
                             <input type="text" class="password" placeholder="Password*">
                             <input type="text" class="fname" placeholder="First Name">
                             <input type="text" class="lname" placeholder="Last name">
-                            <button class="button">Submit</button>
-                            <p class="pass-text hide-password-text">Password must have length of 5 or more</p>
+                            <input type="button" value="Create account">
                         </form>
                     </div>
                 </div>
             </div>
-            <section class="top-movies">
-                <div class="container">
-                    <h3 class="top-movies-title">Top 10 movies today</h3>
-                    <div class="top-ten-movies flex gap-40">
-                        <div class="movie-box num-one flex">
-                            <h1>1</h1>
-                            <figure>
-                                <img src="./assets/media/dune.png" alt="dune">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-two flex">
-                            <h1>2</h1>
-                            <figure>
-                                <img src="./assets/media/ghostbusters.png" alt="Ghostbusters">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-three flex">
-                            <h1>3</h1>
-                            <figure>
-                                <img src="./assets/media/wonka.png" alt="Wonka">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-four flex">
-                            <h1>4</h1>
-                            <figure>
-                                <img src="./assets/media/madame-web.png" alt="MadameWeb">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-five flex">
-                            <h1>5</h1>
-                            <figure>
-                                <img src="./assets/media/kung-fu-panda.png" alt="KungFuPanda">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-six flex">
-                            <h1>6</h1>
-                            <figure>
-                                <img src="./assets/media/hunger-games.png" alt="HungerGames">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-seven flex">
-                            <h1>7</h1>
-                            <figure>
-                                <img src="./assets/media/poor-things.png" alt="PoorThings">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-eight flex">
-                            <h1>8</h1>
-                            <figure>
-                                <img src="./assets/media/immaculate.png" alt="Immaculate">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-nine flex">
-                            <h1>9</h1>
-                            <figure>
-                                <img src="./assets/media/migration.png" alt="Migration">
-                            </figure>
-                        </div>
-                        <div class="movie-box num-ten flex">
-                            <h1>10</h1>
-                            <figure>
-                                <img src="./assets/media/one-love.png" alt="OneLove">
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
         <footer>
-            <div class="container flex sb">
-                <div class="new-movies-alert">
-                    <p>Receive new movie alerts</p>
-                    <form class="flex footer-form">
-                        <input type="text" class="footer-email" placeholder="Email">
-                        <button class="footer-button">Submit</button>
-                    </form>
-                </div>
-                <p class="cc">&copy; final-project 2024</p>
-            </div>
+            
         </footer>
     </body>
 </html>

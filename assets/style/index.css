@@ -26,6 +26,8 @@
     flex: 0 0 100%;
     max-width: 100%;
     color: #fff;
+    display: grid;
+    align-items: baseline;
 }
 
 .box:before {
@@ -60,8 +62,6 @@
 .one-life{background: #fff url(../media/land-one-life.webp) center / cover no-repeat;}
   
 .info {
-    grid-area: content; 
-    justify-self: start; 
     align-self: end;
     margin-bottom: 10%;
     z-index: 1;
@@ -71,7 +71,6 @@ h2 {
     color: #fff;
     font-size: 40px;
     line-height: 30px;
-    margin-bottom: 10px;
     font-weight: 400;
 } 
 
@@ -84,12 +83,28 @@ h3 {
     font-weight: 600;
 }
 
-.back p:not(:first-child) {
+.movie-info {
+    margin: 20px 0;
+}
+
+.movie-info p:not(:first-child) {
     border-left: 1px solid rgba(255, 255, 255, 0.493);
+    padding: 0 10px;
+}
+
+.movie-info p:first-child {
+    padding-right: 10px;
 }
 
 .box span {
-    font-weight: 100;
+    padding: 2px;
+    background-color: var(--primary-color);
+}
+
+.movie-ticket {
+    padding: 5px 25px;
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 
